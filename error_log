@@ -1,0 +1,256 @@
+[22-Nov-2022 00:18:43 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 00:18:43 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 00:19:59 Asia/Ho_Chi_Minh] PHP Warning:  require_once(/home/storepho/public_html/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 47
+[22-Nov-2022 00:19:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../bootstrap/app.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 47
+[22-Nov-2022 00:20:27 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 00:20:27 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 00:26:51 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 00:26:51 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 00:27:34 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 00:27:34 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 07:16:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 07:16:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 07:47:31 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 07:47:31 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:37 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:37 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:37 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:37 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:40 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:40 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:40 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:22:40 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:34 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:34 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:34 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:37:34 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:57:15 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:57:15 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:57:24 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 14:57:24 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 15:03:29 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 15:03:29 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 15:05:06 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 15:05:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 15:06:57 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 15:06:57 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 34
+[22-Nov-2022 15:17:10 Asia/Ho_Chi_Minh] PHP Warning:  require(/home/storepho/public_html/home/storepho/public_html/vendor/autoload.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 35
+[22-Nov-2022 15:17:10 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/home/storepho/public_html/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 35
+[22-Nov-2022 15:18:06 Asia/Ho_Chi_Minh] PHP Warning:  require_once(/home/storepho/public_html/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/storepho/public_html/index.php on line 48
+[22-Nov-2022 15:18:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Failed opening required '/home/storepho/public_html/../bootstrap/app.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/storepho/public_html/index.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/storepho/public_html/index.php on line 48
+[22-Nov-2022 15:19:36 Asia/Ho_Chi_Minh] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/storepho/public_html/vendor/composer/platform_check.php on line 24
