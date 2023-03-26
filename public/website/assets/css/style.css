@@ -10538,6 +10538,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .product_rating .checked{
   color:yellow;
 }
+.home{
+  display: flex;
+  justify-content: center;
+} 
 
 /* rating  */
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);

@@ -34,35 +34,29 @@ class HomeController extends Controller
        $category_id_featured1 = $sql_category1->pluck('id')->toArray();
        $category_id_featured2 = $sql_category2->pluck('id')->toArray();
        $category_id_featured3 = $sql_category3->pluck('id')->toArray();
-        $data['products_random'] = DB::table('products')
-       ->join('categories','products.category_id','=','categories.id')
-       ->select('products.*','categories.name_cate')
-       ->where('status_product',1)
-       ->whereIn('category_id',$category_id_featured)
-       ->inRandomOrder()
-       ->limit(8)
-       ->get();
-   
-       $data['products_random5'] = DB::table('products')
-       ->join('categories','products.category_id','=','categories.id')
-       ->select('products.*','categories.name_cate')
-       ->where('countdown','Is Not',NULL)
-       ->where('status_product',1)
-       ->whereIn('category_id',$category_id_featured3)
-       ->limit(5)
-       ->get();
 
-   
+        //Featured Products
+       $data['products_random'] = DB::table('products')
+        ->join('categories', 'products.category_id', '=', 'categories.id')
+        ->leftJoin('rating', 'products.uuid', '=', 'rating.id_post')
+        ->select('products.*', 'categories.name_cate', 'rating.rating', DB::raw('(SELECT SUM(rating)/COUNT(DISTINCT user_id) FROM rating WHERE id_post = products.uuid) as average_rating'))
+        ->where('status_product', 1)
+        ->whereIn('category_id', $category_id_featured)
+        ->inRandomOrder()
+        ->limit(8)
+        ->get();
+
        $data['products_random1'] = DB::table('products')
-       ->join('categories','products.category_id','=','categories.id')
-       ->select('products.*','categories.name_cate')
-       ->where('status_product',1)
-       ->whereIn('category_id',$category_id_featured)
+       ->join('categories', 'products.category_id', '=', 'categories.id')
+       ->leftJoin('rating', 'products.uuid', '=', 'rating.id_post')
+       ->select('products.*', 'categories.name_cate', 'rating.rating', DB::raw('(SELECT SUM(rating)/COUNT(DISTINCT user_id) FROM rating WHERE id_post = products.uuid) as average_rating'))
+       ->where('status_product', 1)
+       ->whereIn('category_id', $category_id_featured)
        ->inRandomOrder()
        ->limit(8)
        ->get();
 
-
+       // Best Selling Products
        $data['products_random2'] = DB::table('products')
        ->join('categories','products.category_id','=','categories.id')
        ->select('products.*','categories.name_cate')
@@ -82,7 +76,7 @@ class HomeController extends Controller
        ->limit(6)
        ->get();
 
-       
+       //New Arrivals
        $data['products_random4'] = DB::table('products')
        ->join('categories','products.category_id','=','categories.id')
        ->select('products.*','categories.name_cate')
@@ -91,8 +85,18 @@ class HomeController extends Controller
        ->inRandomOrder()
        ->limit(6)
        ->get();
+        //Product_countdown
+       $data['products_random5'] = DB::table('products')
+       ->join('categories', 'products.category_id', '=', 'categories.id')
+       ->leftJoin('rating', 'products.uuid', '=', 'rating.id_post')
+       ->select('products.*', 'categories.name_cate', 'rating.rating', DB::raw('(SELECT SUM(rating)/COUNT(DISTINCT user_id) FROM rating WHERE id_post = products.uuid) as average_rating'))
+       ->where('status_product', 1)
+       ->whereIn('category_id', $category_id_featured3)
+       ->inRandomOrder()
+       ->limit(5)
+       ->get();
+  
 
-        
         $data_category_lasted = DB::table('categories')
             ->where('parent_id',2)
             ->whereNotIn('id',$category_id_featured)
@@ -108,7 +112,9 @@ class HomeController extends Controller
 
         $data["category_lasted"] = $category_lasted; 
         $data['sliders']= DB::table('sliders')->where('status',1)->get();
-        // dd($data);
+
+      
+     
       
         return view('website.modules.home.index',$data);
     }

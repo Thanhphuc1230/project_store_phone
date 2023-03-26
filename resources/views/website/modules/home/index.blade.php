@@ -175,6 +175,25 @@
                                                 </ul>
                                         </div>
                                     </div>
+                                    <div class="product_rating home">
+                                        @php $count_rating =$product->average_rating; @endphp
+
+                                         @if( $count_rating== NULL)                                      
+                                            @for($i=1;$i<=5;$i++)
+                                                <span class="fa fa-star "></span>
+                                            @endfor
+                                       
+                                        @else
+                                            @for($i=1;$i<=$count_rating;$i++)
+                                                <span class="fa fa-star checked"></span>
+                                            @endfor
+                                            @for($j=$count_rating+1;$j<=5;$j++)
+                                                <span class="fa fa-star checked"></span>
+                                            @endfor
+                                        @endif
+                                   
+                                        
+                                    </div>
                                     <div class="product_content">
                                         <div class="product_content_inner">
                                             <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product->name]) }}">{{ $product->name }}</a></h4>
@@ -229,6 +248,26 @@
                                                 <li class="wishlist"><a href="{{route('website.addToWishList', ['id'=>$product1->id])}}" data-tippy-placement="top" data-tippy-arrow="true" data-tippy-inertia="true" data-tippy="Add to Wishlist"><i class="fa-regular fa-heart"></i></i></a></li>
                                                 </ul>
                                         </div>
+                                    </div>
+                                    <div class="product_rating home">
+                                        @php $count_rating =number_format($product1->average_rating); @endphp
+
+                                         @if( $count_rating == 0)                                      
+                                            @for($i=1;$i<=5;$i++)
+                                                <span class="fa fa-star "></span>
+                                            @endfor
+                                         
+                                        @else
+                                            @for($i=1;$i<=$count_rating;$i++)
+                                                <span class="fa fa-star checked"></span>
+                                            @endfor
+                                            @for($j=$count_rating+1;$j<=5;$j++)
+                                                <span class="fa fa-star checked"></span>
+                                            @endfor
+                                        
+                                        @endif
+                                   
+                                        
                                     </div>
                                     <div class="product_content">
                                         <div class="product_content_inner">

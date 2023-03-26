@@ -59,6 +59,7 @@
                                             @for($j=$rate_number+1; $j<=5 ;$j++)
                                             <span class="fa fa-star "></span>
                                             @endfor
+                                            
                                             @if($rating->count() >0)
                                                 ({{ $rating->count()}} Ratings)  
                                             @else

@@ -44,7 +44,7 @@
                         <form action="{{route('resetPassword')}}"  method="post">
                             @csrf
                             <input type="hidden" name="token" value="{{ $token }}">
-                            <input class="form-control" type="text" name="email" value="{{ $email ?? old('email') }}" placeholder="E-mail Address" required>
+                            <input class="form-control" type="hidden" name="email" value="{{ $email ?? old('email') }}" placeholder="E-mail Address" required>
                             
                             <input class="form-control" type="password" name="password" placeholder="Password" required>
                             

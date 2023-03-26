@@ -59,12 +59,16 @@ class NewsController extends Controller
     public function postComment(Request $request,$id){
         
         //create comment
-        $data['comments'] = $request->comments;
-        $data['user_id_comments'] = Auth::user()->uuid;
-        $data['post_id_comments'] = $id;
-        $data['created_at'] = New \DateTime;
-        $data['status_comments'] = 0;
-
+        if($request->comments == NULL){
+            return back()->with('error', 'Bạn chưa comment sản phẩm');
+        }else{
+            $data['comments'] = $request->comments;
+            $data['user_id_comments'] = Auth::user()->uuid;
+            $data['post_id_comments'] = $id;
+            $data['created_at'] = New \DateTime;
+            $data['status_comments'] = 0;
+        }
+    
         //create rating of user
         if($request->input('rate')==NUll){
             return back()->with('error', 'Bạn chưa đánh giá sản phẩm');
