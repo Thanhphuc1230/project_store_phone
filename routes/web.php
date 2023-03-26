@@ -94,7 +94,9 @@ Route::name('website.')->group(function () {
 
 
     Route::get('/blog', [NewsController::class, 'blog'])->name('blog');
-    Route::get('/blog/detail/{uuid}', [NewsController::class, 'blogDetail'])->name('blogDetail');
+    Route::get('/blog/detail/{title}', [NewsController::class, 'blogDetail'])
+    ->name('blogDetail')
+    ->where('uuid', '[a-zA-Z0-9-_]+');
     
     Route::post('/like', [NewsController::class, 'like'])->name('like');
     Route::post('/rating/post', [NewsController::class, 'rating'])->name('rating');

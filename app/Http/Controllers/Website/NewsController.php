@@ -11,8 +11,9 @@ class NewsController extends Controller
     public function blog(){
 
         $data['news']= DB::table('news')->where('status',1)->get();
-
+       
         return view('website.modules.blog.category',$data);
+
     }
     public function blogDetail($id){
         $news = DB::table('news')->where('title',$id)->get();

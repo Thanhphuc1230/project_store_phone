@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a href="index.html">home</a></li>
+                        <li><a href="{{route('website.index')}}">home</a></li>
                         <li>News</li>
                     </ul>
                 </div>
@@ -28,10 +28,19 @@
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{ route('website.blogDetail', ['uuid' => $new->title]) }}"><img src="{{ asset('images/news/'. $new->avatar) }}"alt=""></a>
+                                    @php 
+                                        
+                                        $url = $new->title;
+                                        $newUrl = str_replace('-', ' ', $url);
+                                        $newUrl = rawurlencode($newUrl);
+                                        $newUrl = str_replace('%', '-', $newUrl);
+                                        
+                                    @endphp
+                                   
+                                    <a href="{{ route('website.blogDetail', ['title' => $newUrl]) }}"><img src="{{ asset('images/news/'. $new->avatar) }}"alt=""></a>
                                 </div>
                                 <figcaption class="blog_content">
-                                    <h4 class="post_title"><a href="{{ route('website.blogDetail', ['uuid' => $new->title]) }}">{{$new ->title}}</a>
+                                    <h4 class="post_title"><a href="{{ route('website.blogDetail', ['title' => $newUrl]) }}">{{$new ->title}}</a>
                                     </h4>
                                     <div class="blog_meta">
                                         <span class="author">Posted by : <a >{{$new->author}}</a> / </span>
@@ -45,7 +54,7 @@
                                         <p>{{$new->intro}}</p>
                                     </div>
                                     <footer class="btn_more">
-                                        <a href="{{ route('website.blogDetail', ['uuid' => $new->title]) }}"> Read more</a>
+                                        <a href="{{ route('website.blogDetail', ['title' =>$newUrl]) }}"> Read more</a>
                                     </footer>
                                 </figcaption>
                             </figure>

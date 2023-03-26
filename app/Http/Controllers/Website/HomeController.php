@@ -86,15 +86,14 @@ class HomeController extends Controller
        ->limit(6)
        ->get();
         //Product_countdown
-       $data['products_random5'] = DB::table('products')
-       ->join('categories', 'products.category_id', '=', 'categories.id')
-       ->leftJoin('rating', 'products.uuid', '=', 'rating.id_post')
-       ->select('products.*', 'categories.name_cate', 'rating.rating', DB::raw('(SELECT SUM(rating)/COUNT(DISTINCT user_id) FROM rating WHERE id_post = products.uuid) as average_rating'))
-       ->where('status_product', 1)
-       ->whereIn('category_id', $category_id_featured3)
-       ->inRandomOrder()
-       ->limit(5)
-       ->get();
+        $data['products_random5'] = DB::table('products')
+        ->join('categories','products.category_id','=','categories.id')
+        ->select('products.*','categories.name_cate')
+        ->where('countdown','Is Not',NULL)
+        ->where('status_product',1)
+        ->whereIn('category_id',$category_id_featured3)
+        ->limit(5)
+        ->get();
   
 
         $data_category_lasted = DB::table('categories')
@@ -113,9 +112,6 @@ class HomeController extends Controller
         $data["category_lasted"] = $category_lasted; 
         $data['sliders']= DB::table('sliders')->where('status',1)->get();
 
-      
-     
-      
         return view('website.modules.home.index',$data);
     }
 

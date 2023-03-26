@@ -176,9 +176,9 @@
                                         </div>
                                     </div>
                                     <div class="product_rating home">
-                                        @php $count_rating =$product->average_rating; @endphp
-
-                                         @if( $count_rating== NULL)                                      
+                                        @php $count_rating =number_format($product->average_rating); @endphp
+                               
+                                         @if( $count_rating == 0)                                      
                                             @for($i=1;$i<=5;$i++)
                                                 <span class="fa fa-star "></span>
                                             @endfor
@@ -188,8 +188,9 @@
                                                 <span class="fa fa-star checked"></span>
                                             @endfor
                                             @for($j=$count_rating+1;$j<=5;$j++)
-                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
                                             @endfor
+                                        
                                         @endif
                                    
                                         
@@ -262,7 +263,7 @@
                                                 <span class="fa fa-star checked"></span>
                                             @endfor
                                             @for($j=$count_rating+1;$j<=5;$j++)
-                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
                                             @endfor
                                         
                                         @endif

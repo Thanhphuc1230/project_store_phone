@@ -131,14 +131,22 @@
                             <h3>Bài viết tương tự</h3>
                             <div class="row">
                                 @foreach($news_random1 as $news1)
+                                    @php 
+                                     
+                                        $url = $news1->title;
+                                        $newUrl = str_replace('-', ' ', $url);
+                                        $newUrl = rawurlencode($newUrl);
+                                        $newUrl = str_replace('%', '-', $newUrl);
+                                        
+                                    @endphp
                                 <div class="col-lg-4 col-md-6">
                                     <article class="single_related">
                                         <figure>
                                             <div class="related_thumb">
-                                                <a href="{{ route('website.blogDetail', ['uuid' => $news1->title]) }}"><img src=" {{ asset('images/news/'. $news1->avatar) }} " alt=""></a>
+                                                <a href="{{ route('website.blogDetail', ['title' => $newUrl]) }}"><img src=" {{ asset('images/news/'. $news1->avatar) }} " alt=""></a>
                                             </div>
                                             <figcaption class="related_content">
-                                                <h4><a href="{{ route('website.blogDetail', ['uuid' => $news1->title]) }}">{{$news1->title}}</a></h4>
+                                                <h4><a href="{{ route('website.blogDetail', ['title' => $newUrl]) }}">{{$news1->title}}</a></h4>
                                                 <div class="blog_meta">
                                                     <span class="author">By : <a href="">{{$news1->author}}</a> / </span>
                                                     <span class="meta_date">{{ date('d/m/Y', strtotime($news1->created_at)) }}	</span>
