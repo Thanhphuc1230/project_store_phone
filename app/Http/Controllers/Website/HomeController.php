@@ -134,11 +134,6 @@ class HomeController extends Controller
         return $sql->get();
     }
 
- 
- 
-
-  
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -146,8 +141,4 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
-    
-
-    
 }

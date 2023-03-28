@@ -69,7 +69,7 @@
                             </div>
                         </form>
                         <div class="other-links">
-                            <span>Or login with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+                            <span>Or login with</span><a href="{{route('LoginFacebook')}}">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
                         </div>
                     </div>
                 </div>

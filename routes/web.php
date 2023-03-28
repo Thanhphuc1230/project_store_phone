@@ -24,7 +24,7 @@ use App\Http\Controllers\Website\SearchController;
 
 use App\Http\Controllers\LoginController;
 
-
+use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\SendEmailController;
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +42,9 @@ use App\Http\Controllers\SendEmailController;
 
 Route::get('verify/{uuid}',[LoginController::class,'verify'])->name('verify');
 
+Route::fallback(function () {
+    return view('website.modules.error.error404');
+});
 
 
 
@@ -49,21 +52,20 @@ Route::get('verify/{uuid}',[LoginController::class,'verify'])->name('verify');
 Route::name('website.')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
     Route::get('/check', [CartController::class, 'check'])->name('check');
-
+    //search
     Route::post('/search', [SearchController::class, 'search'])->name('search');
     Route::get('/searchNow', [SearchController::class, 'searchNow'])->name('searchNow');
-
+    //user comment
     Route::post('/postComment/{uuid}', [NewsController::class, 'postComment'])->name('postComment');
     Route::get('/postComment/{uuid}', [NewsController::class, 'postNow'])->name('postNow');
-
+    //profile user
     Route::get('/profile/{uuid}', [ProfileController::class, 'account'])->name('account');
     Route::get('/profile/edit/{uuid}', [ProfileController::class, 'accountEdit'])->name('accountEdit');
     Route::post('/profile/update/{uuid}', [ProfileController::class, 'accountUpdate'])->name('accountUpdate');
     Route::get('/profile/order/{id}', [ProfileController::class, 'accountOrder'])->name('accountOrder');
 
-    
+    //product show
     Route::get('/product/{id}', [PController::class, 'product'])->name('product');
-
     Route::get('/product_countdown/{id}', [PController::class, 'product_countdown'])->name('product_countdown');
 
     Route::get('/price/5tr/{id}', [PController::class, 'price'])->name('price');
@@ -73,48 +75,49 @@ Route::name('website.')->group(function () {
     Route::get('/category/{id}', [PController::class, 'category'])->name('category');
     Route::get('/category/parent/{id}', [PController::class, 'categoryParent'])->name('categoryParent');
     
+    //cart
     Route::get('/add-to-cart/{id}/{quantity?}', [CartController::class, 'addToCart'])->name('addToCart');
     Route::post('/update-cart', [CartController::class, 'updateCart'])->name('updateCart');
     Route::get('/remove-item-cart/{id}', [CartController::class, 'removeItemCart'])->name('removeItemCart');
     Route::get('/cart/{uuid}', [CartController::class, 'cart'])->name('cart');
 
+    //wishlist
     Route::get('/add-to-wishlist/{id}/{quantity?}', [CartController::class, 'addToWishList'])->name('addToWishList');
     Route::get('/add-to-wishlist-new/{id}/{quantity?}', [CartController::class, 'addToWishListNew'])->name('addToWishListNew');
     Route::get('/wishlist', [CartController::class, 'wishlist'])->name('wishlist');
     Route::get('/remove-wish-list/{id}', [CartController::class, 'removeWishList'])->name('removeWishList');
 
+    //checkout
     Route::get('/checkout/{uuid}', [CartController::class, 'checkout'])->name('checkout');
     Route::post('checkout/store/{uuid}', [CartController::class, 'store'])->name('store');
     Route::get('/checkout/order_place/{uuid}', [CartController::class, 'order_place'])->name('order_place');
-
+    Route::get('/checkout/bill/{uuid}', [CartController::class, 'bill'])->name('bill');
     Route::get('/detail/{id}', [PController::class, 'detail'])->name('detail');
     Route::post('/rating/product', [PController::class, 'ratingProduct'])->name('ratingProduct');
-
-    
-
-
+    //Detail Blog
     Route::get('/blog', [NewsController::class, 'blog'])->name('blog');
     Route::get('/blog/detail/{title}', [NewsController::class, 'blogDetail'])
     ->name('blogDetail')
-    ->where('uuid', '[a-zA-Z0-9-_]+');
-    
+    ->where('uuid', '[a-zA-Z0-9-_]+');    
     Route::post('/like', [NewsController::class, 'like'])->name('like');
     Route::post('/rating/post', [NewsController::class, 'rating'])->name('rating');
    
-
     Route::get('/comingsoon', [NewsController::class, 'comingSoon'])->name('comingSoon');
     Route::get('/aboutus', [NewsController::class, 'about'])->name('about');
     Route::get('/map', [NewsController::class, 'map'])->name('map');
 
+    //Craw data form TGDD
     Route::get('/get-data', [CrawlerController::class, 'featchAllTGDD'])->name('getData');
-
-
-
 
 });
 
 Route::get('login', [LoginController::class, 'getLogin'])->name('getLogin');
 Route::post('login', [LoginController::class, 'postLogin'])->name('postLogin');
+
+
+Route::get('/auth/facebook',[LoginController::class, 'LoginFacebook'])->name('LoginFacebook');
+Route::get('/auth/facebook/callback', [LoginController::class, 'callBackFacebook'])->name('callBackFacebook');
+Route::get('/auth/facebook/logout', [LoginController::class, 'logoutFacebook'])->name('logoutFacebook');
 
 Route::get('register', [LoginController::class, 'getRegister'])->name('getRegister');
 Route::post('register', [LoginController::class, 'postRegister'])->name('postRegister');
@@ -135,20 +138,16 @@ Route::prefix('admin')->name('admin.')->middleware('check_login')->group(functio
         Route::get('/unactive_products/{id}', 'unactive_products')->name('unactive_products');
         Route::get('/active_products/{id}', 'active_products')->name('active_products');
         Route::get('/create', 'create')->name('create');
-      
         Route::get('/create_new', 'create_new')->name('create_new');
         Route::post('/store_new', 'store_new')->name('store_new');
         Route::post('/store', 'store')->name('store');
         Route::get('/edit/{uuid}', 'edit')->name('edit');
-
         Route::post('/update/{uuid}', 'update')->name('update');
         Route::get('/destroy/{uuid}', 'destroy')->name('destroy');
-
         Route::get('/images/{uuid}', 'images')->name('images');
         Route::post('/store_images', 'store_images')->name('store_images');
         Route::get('/imagesEdit/{uuid}', 'imagesEdit')->name('imagesEdit');
         Route::post('/updateEdit/{uuid}', 'updateEdit')->name('updateEdit');
-
         Route::get('/add_gallery/{id}', 'add_gallery')->name('add_gallery');
         Route::post('/select_gallery', 'select_gallery')->name('select_gallery');
 
@@ -191,7 +190,6 @@ Route::prefix('admin')->name('admin.')->middleware('check_login')->group(functio
         Route::get('/acceptCmt', 'acceptCmt')->name('acceptCmt');
         Route::get('/DestroyCmt/{id}', 'DestroyCmt')->name('DestroyCmt');
         
-
     });
     Route::controller(WarehouseController::class)->prefix('warehouses')->name('warehouses.')->group(function(){
         Route::get('/', 'index')->name('index');

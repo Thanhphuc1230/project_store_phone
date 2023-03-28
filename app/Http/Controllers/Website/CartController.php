@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\DB;
 use Session;
 use Auth;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Mail\Message;
 class CartController extends Controller
 {
     public function cart($id){
@@ -147,9 +149,7 @@ class CartController extends Controller
        
         return back()->with('success', 'Đã thêm sản phẩm vào danh sách yêu thích thành công');
     //    }
-       
-        
-  
+
         // if (Session::has('wishlist')) {
         //     $wishlist   = Session::get('wishlist');
 
@@ -182,10 +182,6 @@ class CartController extends Controller
        ->where('id_users',Auth::user()->uuid)
        ->get();
 
-    //     $data['count']=DB::table('wishlist')
-    //    ->where('product_name','iPhone 14 Pro')
-    //    ->count();
-    //    dd($data);
         $count=count( $data['test']);
        if(  $count == 0){
         return back()->with('error', 'Chưa có sản phẩm yêu thích nào');
@@ -193,11 +189,7 @@ class CartController extends Controller
         return view('website.modules.cart.wishlist',$data);
        }
       
-     
-        
-        // }
-        
-        
+
     }
     public function removeWishList (Request $request,$id) {
 
@@ -238,7 +230,7 @@ class CartController extends Controller
     public function store(OrderRequest $request,$id){
         //insert users
         $time = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
-
+        $email_user = $request->email;
         $data =array();
         $data = [
             'fullname_order'=> $request->fullname_order,
@@ -305,28 +297,23 @@ class CartController extends Controller
             ->update(['quantity'=> DB::raw('quantity'. '+'. Cart::count() )]);
             $turnovers['updateTurnovers']=DB::table('turnover')->where('order_date',$dt)
             ->update(['total_order'=> DB::raw('total_order +  1')]);
-
         }
 
-      
-
-       
-        
-
-      
-      
-       
-       
-      
-
-        return redirect()->route('website.order_place',$order['user']->uuid);
+        Mail::send('website.modules.cart.bill', $data, function(Message $message) use ($request) {
+            $message->to($request->email);
+            $message->subject('Bill Product');
+        });
+       return redirect()->route('website.order_place',$order['user']->uuid);
     }
 
     public function order_place($id){
         $data['user'] = DB::table('users')->where('uuid',$id)->first();
 
-    
+
         Cart::destroy();
         return view('website.modules.cart.order_place',$data);
+    }
+    public function bill(){
+        return view('website.modules.cart.bill');
     }
 }

@@ -9,14 +9,14 @@
     <ul id="sidebar_menu">
         <li class="">
             <a aria-expanded="false">
-            <div class="nav_icon_small">
-             <img src="{{ asset('style/img/menu-icon/4.svg') }}" alt="">
-            </div>
-            <div class="nav_title">
-            <span>Hello {{ Auth::user()->fullname }}</span>
-            </div>
+                <div class="nav_icon_small">
+                    <img src="{{ asset('style/img/menu-icon/4.svg') }}" alt="">
+                </div>
+                <div class="nav_title">
+                    <span>Hello {{ Auth::user()->fullname }}</span>
+                </div>
             </a>
-            </li>
+        </li>
     <li class="">
     <a class="has-arrow"  aria-expanded="false">
     <div class="nav_icon_small">
@@ -28,14 +28,8 @@
     </a>
     <ul>
     <li><a href="{{ route('website.index')}}" target="__blank">Trang chủ</a></li>
-    
-
     </ul>
     </li>
-  
-  
-
-   
     <li class="">
         <a class="has-arrow"  aria-expanded="false">
         <div class="nav_icon_small">
@@ -61,7 +55,7 @@
     </div>
     </a>
     
-    </li>
+      </li>
 
     <li class="">
         <a  aria-expanded="false" href="{{ route('admin.categories.index')}}">
