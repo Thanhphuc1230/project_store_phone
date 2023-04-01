@@ -134,6 +134,7 @@
                         </div>
                         <div class="product_tab_btn">
                             <ul class="nav">
+                                     
                                 @foreach ($categories_featured as $cate)
                                 <li>
                                     <a href="{{route('website.category',['id' =>$cate->name_cate] ) }}"   data-filter=".{{ Str::of($cate->name_cate)->slug("-") }}">
@@ -155,8 +156,8 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{ route('website.detail', ['id' => $product->name]) }}"><img src="{{ asset('images/products/'. $product->images) }}" alt=""></a>
-                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => $product->name]) }}"><img src="{{ asset('images/products/'. $product->images) }}" alt=""></a>
+                                        <a class="primary_img" href="{{ route('website.detail', ['id' => Str::of( $product->name)->slug("-"),'uuid'=>$product->uuid]) }}"><img src="{{ asset('images/products/'. $product->images) }}" alt=""></a>
+                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $product->name)->slug("-"),'uuid'=>$product->uuid]) }}"><img src="{{ asset('images/products/'. $product->images) }}" alt=""></a>
                                         @php  if($product->old_price == NULL){
 
                                             @endphp
@@ -197,7 +198,7 @@
                                     </div>
                                     <div class="product_content">
                                         <div class="product_content_inner">
-                                            <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product->name]) }}">{{ $product->name }}</a></h4>
+                                            <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product->name)->slug("-"),'uuid'=>$product->uuid ]) }}">{{$product->name  }}</a></h4>
                                             <div class="price_box">
                                                 @php  if($product->old_price == NULL){
 
@@ -230,8 +231,8 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{ route('website.detail', ['id' => $product1->name]) }}"><img src="{{ asset('images/products/'. $product1->images) }}" alt=""></a>
-                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => $product1->name]) }}"><img src="{{ asset('images/products/'. $product1->images) }}" alt=""></a>
+                                        <a class="primary_img" href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}"><img src="{{ asset('images/products/'. $product1->images) }}" alt=""></a>
+                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}"><img src="{{ asset('images/products/'. $product1->images) }}" alt=""></a>
                                         @php  if($product1->old_price == NULL){
 
                                             @endphp
@@ -272,7 +273,7 @@
                                     </div>
                                     <div class="product_content">
                                         <div class="product_content_inner">
-                                            <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product1->name]) }}">{{ $product1->name }}</a></h4>
+                                            <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}">{{ $product1->name }}</a></h4>
                                             <div class="price_box">
                                                 @php  if($product1->old_price == NULL){
 
@@ -343,11 +344,11 @@
                         <div class="product_items">
                             <figure class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{ route('website.detail', ['id' => $product2->name]) }}"><img src="{{ asset('images/products/'. $product2->images) }}" alt=""></a>
-                                    <a class="secondary_img" href="{{ route('website.detail', ['id' => $product2->name]) }}"><img src="{{ asset('images/products/'. $product2->images) }}" alt=""></a>
+                                    <a class="primary_img" href="{{ route('website.detail', ['id' =>  Str::of( $product2->name)->slug("-"),'uuid'=>$product2->uuid]) }}"><img src="{{ asset('images/products/'. $product2->images) }}" alt=""></a>
+                                    <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $product2->name)->slug("-"),'uuid'=>$product2->uuid]) }}"><img src="{{ asset('images/products/'. $product2->images) }}" alt=""></a>
                                 </div>
                                 <div class="product_content">
-                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product2->name]) }}">{{$product2->name}}</a></h4>
+                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product2->name)->slug("-"),'uuid'=>$product2->uuid]) }}">{{$product2->name}}</a></h4>
                                     {{-- <div class="product_rating">
                                         <ul>
                                             <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -386,11 +387,11 @@
                         <div class="product_items">
                             <figure class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{ route('website.detail', ['id' => $product3->name]) }}"><img src="{{ asset('images/products/'. $product3->images) }}" alt=""></a>
-                                    <a class="secondary_img" href="{{ route('website.detail', ['id' => $product3->name]) }}"><img src="{{ asset('images/products/'. $product3->images) }}" alt=""></a>
+                                    <a class="primary_img" href="{{ route('website.detail', ['id' => Str::of( $product3->name)->slug("-"),'uuid'=>$product3->uuid]) }}"><img src="{{ asset('images/products/'. $product3->images) }}" alt=""></a>
+                                    <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $product3->name)->slug("-"),'uuid'=>$product3->uuid]) }}"><img src="{{ asset('images/products/'. $product3->images) }}" alt=""></a>
                                 </div>
                                 <div class="product_content">
-                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product3->name]) }}">{{$product3->name}}</a></h4>
+                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product3->name)->slug("-"),'uuid'=>$product3->uuid]) }}">{{$product3->name}}</a></h4>
                                     {{-- <div class="product_rating">
                                         <ul>
                                             <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -464,8 +465,8 @@
                             <figure>
 
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{ route('website.detail', ['id' => $product4->name]) }}"><img src="{{ asset('images/products/'. $product4->images) }}" alt=""></a>
-                                    <a class="secondary_img" href="{{ route('website.detail', ['id' => $product4->name]) }}"><img src="{{ asset('images/products/'. $product4->images) }}" alt=""></a>
+                                    <a class="primary_img" href="{{ route('website.detail', ['id' =>Str::of( $product4->name)->slug("-") ,'uuid'=>$product4->uuid]) }}"><img src="{{ asset('images/products/'. $product4->images) }}" alt=""></a>
+                                    <a class="secondary_img" href="{{ route('website.detail',['id' => Str::of( $product4->name)->slug("-"),'uuid'=>$product4->uuid]) }}"><img src="{{ asset('images/products/'. $product4->images) }}" alt=""></a>
                                     @php  if($product4->old_price == NULL){
 
                                         @endphp
@@ -486,7 +487,7 @@
                                 </div>
                                 <div class="product_content">
                                     <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product4->name]) }}">{{ $product4->name}}</a></h4>
+                                        <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product4->name)->slug("-"),'uuid'=>$product4->uuid]) }}">{{ $product4->name}}</a></h4>
                                         <div class="price_box">
                                             @php  if($product4->old_price == NULL){
 
@@ -568,11 +569,11 @@
                                 @foreach ($product as $item)
                                 <figure class="single_product">
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{ route('website.detail', ['id' => $item->name]) }}"><img src="{{ asset('images/products/'. $item->images) }}" alt=""></a>
-                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => $item->name]) }}"><img src="{{ asset('images/products/'. $item->images) }}" alt=""></a>
+                                        <a class="primary_img" href="{{ route('website.detail', ['id' => Str::of( $item->name)->slug("-"),'uuid'=>$item->uuid]) }}"><img src="{{ asset('images/products/'. $item->images) }}" alt=""></a>
+                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $item->name)->slug("-"),'uuid'=>$item->uuid]) }}"><img src="{{ asset('images/products/'. $item->images) }}" alt=""></a>
                                     </div>
                                     <div class="product_content">
-                                        <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $item->name]) }}">{{$item->name}}</a></h4>
+                                        <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $item->name)->slug("-"),'uuid'=>$item->uuid]) }}">{{$item->name}}</a></h4>
                                         {{-- <div class="product_rating">
                                             <ul>
                                                 <li><a href="#"><i class="ion-android-star-outline"></i></a></li>

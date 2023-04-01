@@ -32,9 +32,12 @@ public function category($id){
             
     return view('website.modules.product.category',$data);
 }
-public function detail($id){
-        $product = DB::table('products')->where('name',$id)->get();
+public function detail($id,$uuid){
+       
+        
+        $product = DB::table('products')->where('uuid',$uuid)->get();
 
+ 
         $id_product = $product->pluck('id')->toArray();
 
         $uuid_product = $product->pluck('uuid')->toArray();
@@ -61,8 +64,10 @@ public function detail($id){
         $data['images_new2'] = str_replace('[{"filenames":"[','', $data['images_new1'] );
         $data['images_new3'] = str_replace(']"}]','', $data['images_new2'] );
         
-
+    
         $category_id_of_project = $data['product']->cateid;
+
+    
 
         $data['product_related'] = DB::table('products')
         ->join('categories','products.category_id','=','categories.id')
@@ -70,12 +75,12 @@ public function detail($id){
         ->where('status_product',1)
         ->where([
             ['category_id', $category_id_of_project],
-            ['products.id', '!=' , $id]
+            ['products.id', '!=' , $uuid]
         ])
         ->inRandomOrder()
         ->limit(9)
         ->get();
-
+     
         $data['comments'] = DB::table('comments')
         ->select('comments.*','users.fullname','users.avatar')
         ->join('users','comments.user_id_comments','=','users.uuid')
@@ -231,14 +236,14 @@ public function price10tr($id){
     return view('website.modules.price.price10tr',$data);
 }
 public function price20tr($id){
-    $sql_sidebar = DB::table('categories')
-    ->where('name_cate', $id)->get();
-    
-    $id_name_cate = $sql_sidebar->pluck('id')->toArray();
+        $sql_sidebar = DB::table('categories')
+        ->where('name_cate', $id)->get();
+        
+        $id_name_cate = $sql_sidebar->pluck('id')->toArray();
 
-    $sql_category = DB::table('categories')
-    ->where('parent_id',  $id_name_cate)
-    ->limit(8);
+        $sql_category = DB::table('categories')
+        ->where('parent_id',  $id_name_cate)
+        ->limit(8);
 
         $data['categories_featured'] = $sql_category->get();
 
@@ -284,7 +289,6 @@ public function price25tr($id){
         ->join('categories', 'products.category_id', '=', 'categories.id')
         ->select('products.*', 'categories.name_cate as catename')
         ->whereIn('category_id', $category_id_featured)
-        // ->where('price','<=','10000000')
         ->where('status_product',1)
         ->where('price','>','23000000')
         ->orderBy('price','DESC')
@@ -299,7 +303,7 @@ public function price25tr($id){
         ->inRandomOrder()
         ->limit(4)
         ->get();
-
+  
     return view('website.modules.price.price25tr',$data);
 }
 

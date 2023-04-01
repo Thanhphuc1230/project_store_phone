@@ -8,7 +8,7 @@
                 <div class="breadcrumb_content">
                     <ul>
                         <li><a href="{{route('website.index')}}">Trang chủ</a></li>
-                        <li>Sản phẩm giá dưới 15tr-20tr</li>
+                        <li>Sản phẩm giá dưới 10tr - 15tr</li>
                     </ul>
                 </div>
             </div>
@@ -38,11 +38,11 @@
                             <article class="recent_product_list">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="{{ route('website.detail', ['id' => $product1->name]) }}"><img src="{{ asset('images/products/' . $product1->images) }}"alt=""></a>
-                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => $product1->name]) }}"><img src="{{ asset('images/products/' . $product1->images) }}"alt=""></a>
+                                        <a class="primary_img" href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}"><img src="{{ asset('images/products/' . $product1->images) }}"alt=""></a>
+                                        <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}"><img src="{{ asset('images/products/' . $product1->images) }}"alt=""></a>
                                     </div>
                                     <div class="product_content">
-                                        <h4><a href="{{ route('website.detail', ['id' => $product1->name]) }}">{{$product1->name}}</a></h4>
+                                        <h4><a href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}">{{$product1->name}}</a></h4>
                                         {{-- <div class="product_rating">
                                             <ul>
                                                 <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -96,7 +96,7 @@
                         <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
                     </div>
                     <div class="page_amount">
-                        <h3>Sản phẩm giá dưới 15tr-20tr</h3>
+                        <h3>sản phẩm giá dưới 10tr - 15tr</h3>
                     </div>
                     <div class="page_amount">
                         <p>Showing 1–9 of 21 results</p>
@@ -111,8 +111,8 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="{{ route('website.detail', ['id' => $product->name]) }}"><img src="{{ asset('images/products/' . $product->images) }}" alt=""></a>
-                                    <a class="secondary_img" href="{{ route('website.detail', ['id' => $product->name]) }}"><img src="{{ asset('images/products/' . $product->images) }}" alt=""></a>
+                                    <a class="primary_img" href="{{ route('website.detail', ['id' => Str::of( $product->name)->slug("-"),'uuid'=>$product->uuid]) }}"><img src="{{ asset('images/products/' . $product->images) }}" alt=""></a>
+                                    <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $product->name)->slug("-"),'uuid'=>$product->uuid]) }}"><img src="{{ asset('images/products/' . $product->images) }}" alt=""></a>
                                     @php  if($product->old_price == NULL){
 
                                         @endphp
@@ -135,7 +135,7 @@
 
                                 <div class="product_content grid_content">
                                     <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product->name]) }}">{{$product->name}}</a></h4>
+                                        <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product->name)->slug("-"),'uuid'=>$product->uuid]) }}">{{$product->name}}</a></h4>
                                         {{-- <div class="product_rating">
                                             <ul>
                                                 <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -164,7 +164,7 @@
                                     </div>
                                 </div>
                                 <div class="product_content list_content">
-                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => $product->name]) }}">{{$product->name}}</a></h4>
+                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product->uuid]) }}">{{$product->name}}</a></h4>
                                     {{-- <div class="product_rating">
                                         <ul>
                                             <li><a href="#"><i class="ion-android-star-outline"></i></a></li>

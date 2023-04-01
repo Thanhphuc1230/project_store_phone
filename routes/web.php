@@ -55,6 +55,8 @@ Route::name('website.')->group(function () {
     //search
     Route::post('/search', [SearchController::class, 'search'])->name('search');
     Route::get('/searchNow', [SearchController::class, 'searchNow'])->name('searchNow');
+    Route::get('/liveSearch', [SearchController::class, 'ajaxSearch'])->name('ajaxSearch');
+    
     //user comment
     Route::post('/postComment/{uuid}', [NewsController::class, 'postComment'])->name('postComment');
     Route::get('/postComment/{uuid}', [NewsController::class, 'postNow'])->name('postNow');
@@ -67,6 +69,9 @@ Route::name('website.')->group(function () {
     //product show
     Route::get('/product/{id}', [PController::class, 'product'])->name('product');
     Route::get('/product_countdown/{id}', [PController::class, 'product_countdown'])->name('product_countdown');
+    
+    Route::get('/detail/{id}/{uuid}', [PController::class, 'detail'])->name('detail')->where('id', '[-\w]+');;   
+    Route::post('/rating/product', [PController::class, 'ratingProduct'])->name('ratingProduct');
 
     Route::get('/price/5tr/{id}', [PController::class, 'price'])->name('price');
     Route::get('/price/5-15tr/{id}', [PController::class, 'price10tr'])->name('price10tr');
@@ -92,8 +97,7 @@ Route::name('website.')->group(function () {
     Route::post('checkout/store/{uuid}', [CartController::class, 'store'])->name('store');
     Route::get('/checkout/order_place/{uuid}', [CartController::class, 'order_place'])->name('order_place');
     Route::get('/checkout/bill/{uuid}', [CartController::class, 'bill'])->name('bill');
-    Route::get('/detail/{id}', [PController::class, 'detail'])->name('detail');
-    Route::post('/rating/product', [PController::class, 'ratingProduct'])->name('ratingProduct');
+
     //Detail Blog
     Route::get('/blog', [NewsController::class, 'blog'])->name('blog');
     Route::get('/blog/detail/{title}', [NewsController::class, 'blogDetail'])

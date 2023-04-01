@@ -113,7 +113,52 @@
 <script src="{{ asset('website/assets/js/main.js') }}"></script>
 <script src="https://kit.fontawesome.com/9d4570d54a.js" crossorigin="anonymous"></script>
 
-
+<script>
+    $('.search-result').hide();
+    $('.search-input').keyup(function(){
+        var _text =$(this).val();
+        var _img = "{{ asset('images/products' )}}";
+        var _url = "{{url('/detail')}}";
+        if(_text != ''){
+            $.ajax({
+            url : "{{route('website.ajaxSearch')}}?key="+ _text,
+            type: 'GET',
+            success:function(res){
+                var _html = '';
+        
+                for (var pro of res){
+                     var _name_products =convertToSlug(pro.name);
+                    _html +='<div class="post_wrapper">'
+                    _html +='<div class="post_thumb">'
+                    _html +='<a href="'+_url+'/'+_name_products+'/'+ pro.uuid+'"><img width="100" src="'+_img+'/' + pro.images + '" alt=""></a>'
+                    _html +='</div>'
+                    _html +='<div class="post_info">'
+                    _html +='<h4><a href="'+_url+'/'+_name_products+'/'+ pro.uuid+ '">' +pro.name +'</a></h4>'
+                    _html +='<span>'+ new Intl.NumberFormat().format(pro.price )+'VND </span>'
+                    _html +='</div>'
+                    _html +='</div>   '
+                }
+                $('.search-result').show();
+                $('.search-result').html(_html);
+                console.log(res);
+                        }
+                    });
+        }else{
+            $('.search-result').html('');
+            $('.search-result').hide();
+        }
+              
+         });
+         function convertToSlug(Text) {
+            // Replace spaces with hyphens
+            var replaced = Text.replaceAll(' ', '-');
+            
+            // Encode special characters
+            var encoded = encodeURIComponent(replaced);
+            
+            return encoded;
+        }
+</script>
 </body>
 
 </html>

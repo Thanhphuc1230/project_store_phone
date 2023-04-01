@@ -409,13 +409,19 @@
                                 @csrf
                                 
                                 <div class="search_box">
-                                    <input placeholder="Search product..." type="text" name="search">
+                                    <input placeholder="Search product..." type="text" name="search" class="search-input">
                                     <button type="submit">Search</button> 
                                 </div>
                             </form>
                         </div>
+                        <div class="column2 col-lg-6">
+                        <div class="search_container search-result" >
+                            
+                            </div>
+                    </div>
 
                     </div>
+                    
                     <div class="column3 col-lg-3 col-md-6">
                         {{-- <div class="header_bigsale">
                             <a href="#">BIG SALE BLACK FRIDAY</a>
