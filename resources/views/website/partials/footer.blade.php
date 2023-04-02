@@ -139,8 +139,7 @@
                     _html +='</div>   '
                 }
                 $('.search-result').show();
-                $('.search-result').html(_html);
-                console.log(res);
+                $('.search-result').html(_html);  
                         }
                     });
         }else{

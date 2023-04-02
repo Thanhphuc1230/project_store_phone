@@ -16,21 +16,11 @@ use Illuminate\Mail\Message;
 class CartController extends Controller
 {
     public function cart($id){
-     
-        // Cart::instance('wishlist')->store('username');
-        // if(Cart::count()== 0){
-        //     return redirect()->route('website.index');
-        // }
         $data['carts']= Cart::count();
-        // $data['cart']=Cart::content();
-         $data['store'] =DB::table('users')->where('uuid',$id)->first();  
-            // Cart::store($data['store']->fullname);
-            // dd($data);
-           
-        
-            return view('website.modules.cart.cart',$data);
-       
-       
+
+        $data['store'] =DB::table('users')->where('uuid',$id)->first();  
+  
+        return view('website.modules.cart.cart',$data);
     }
 
     public function check(){
@@ -39,17 +29,15 @@ class CartController extends Controller
         return back()->with('error', 'Vui lòng'  .$login .'để sử dụng chức năng '.  $mess);
     }
     public function addToCart($id,$quantity = 1 ){
-        
-
+    
         $products =DB::table('products')->where('id',$id)->first();  
 
-     
             if(Auth::user() == NULL){
                  Cart::add(['id' => $products->id, 'name' => $products->name, 'qty' => $quantity, 'price' => $products->price,
-                'weight' => 0, 'options' => ['images' => $products->images]]);
+                'weight' => 0, 'options' => ['images' => $products->images,'uuid'=>$products->uuid]]);
             }else{
                 $addProduct =  Cart::add(['id' => $products->id, 'name' => $products->name, 'qty' => $quantity, 'price' => $products->price,
-                'weight' => 0, 'options' => ['images' => $products->images]]);
+                'weight' => 0, 'options' => ['images' => $products->images,'uuid'=>$products->uuid]]);
                 $data =array();
                 $data=[
                     'user_id'=> Auth::user()->uuid,
@@ -61,20 +49,14 @@ class CartController extends Controller
                 DB::table('cart')->insert($data);
             }
            
-        
-       
-         
-       
             return back()->with('success', 'Đã thêm sản phẩm vào giỏ hàng thành công');
     }
 
     public function updateCart(Request $request){
-        
         foreach($request->quantity as $key => $quantity){
             Cart::update($key, $quantity); 
         }
      
-
         return back()->with('success', 'Cập nhật giỏ hàng thành công');
       
     }
@@ -84,9 +66,6 @@ class CartController extends Controller
         return back()->with('success', 'Xóa sản phẩm trong giỏ hàng thành công');
     }
 
- 
-
-
     public function addToWishList (WishlistRequest $request, $id) {
        if(Auth::user() == Null){
         $mess ='nếu chưa có tài khoản vui lòng click vào đây để  <a href="'.route('getRegister').'" style="color: blue">Đăng ký</a>';
@@ -94,15 +73,11 @@ class CartController extends Controller
         return back()->with('error', 'Vui lòng'  .$login .'để sử dụng chức năng '.  $mess);
        }else{
 
-
-
         $products =DB::table('products')->where('id',$id)->first();  
 
         $order= DB::table('users')->where('uuid',Auth::user()->uuid)->first();
 
-        $products1 =DB::table('wishlist')->where('id_users',Auth::user()->uuid)->where('product_id',$id)->count()
-        ;
-        
+        $products1 =DB::table('wishlist')->where('id_users',Auth::user()->uuid)->where('product_id',$id)->count();
         
         $wishlist = DB::table('top_wishlist')->where('id_product', $id)->count();
         $time = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
@@ -122,7 +97,6 @@ class CartController extends Controller
        }else{
         return back()->with('error', 'Sản phẩm đã được thêm vào danh sách yêu thích rồi');
        }
-            
           if($wishlist == 0 ){             
                 $wishlist_top =array();
                 $wishlist_top=[
@@ -139,14 +113,9 @@ class CartController extends Controller
           ->where('id_product', $id)
         //   ->update(['likes_top'=> DB::raw('likes_top +  1')])
         //   ->update(['updated_at'=> DB::raw('updated_at + Carbon::today()'  )])
-          ;
-  
-          
+          ;      
         };
     }
-
-        
-       
         return back()->with('success', 'Đã thêm sản phẩm vào danh sách yêu thích thành công');
     //    }
 
@@ -176,8 +145,6 @@ class CartController extends Controller
 
     public function wishlist(){
 
-       
-
        $data['test']=DB::table('wishlist')
        ->where('id_users',Auth::user()->uuid)
        ->get();
@@ -188,34 +155,26 @@ class CartController extends Controller
        }else{
         return view('website.modules.cart.wishlist',$data);
        }
-      
 
     }
     public function removeWishList (Request $request,$id) {
 
-       
         $data['deleteWishList'] =DB::table('wishlist')
-    
         ->where('id',$id);
-        
         
         $deleteTopWishList =  $data['deleteWishList']->pluck('product_name')->toArray();
      
         $top_wishlist['deleteTopWishlists']=DB::table('top_wishlist')->where('name_product',$deleteTopWishList)
         ->update(['likes_top'=> DB::raw('likes_top -  1')])
         ;
-     
-
-        
+          
         $data['deleteWishList']->delete();
         
-
          return back()->with('success', 'Xóa mục yêu thích thành công');
     }
 
     public function checkout($id){
          $count=Cart::count();
-
 
          if( $count == 0){
             return back()->with('error', 'Không có sản phẩm nào trong giỏ hàng để thanh toán ');
@@ -308,7 +267,6 @@ class CartController extends Controller
 
     public function order_place($id){
         $data['user'] = DB::table('users')->where('uuid',$id)->first();
-
 
         Cart::destroy();
         return view('website.modules.cart.order_place',$data);

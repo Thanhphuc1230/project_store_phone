@@ -15,7 +15,6 @@
         </div>
     </div>
 </div>
-
     <div class="cart_page_bg">
         <div class="container">
             <div class="shopping_cart_area">
@@ -40,13 +39,11 @@
                                             @foreach($cart as $item)
                                             <tr>
                                                 <td class="product_remove"><a href="{{ route('website.removeItemCart', ['id' => $item->rowId]) }}"><i class="fa fa-trash-o"></i></a></td>
-                                                <td class="product_thumb"><a href="{{ route('website.detail', ['id' => $item->name]) }}"><img src="{{ asset('images/products/'. $item->options->images) }}" alt=""></a></td>
-                                                <td class="product_name"><a href="{{ route('website.detail', ['id' => $item->name]) }}">{{$item->name}}</a></td>
+                                                <td class="product_thumb"><a href="{{ route('website.detail', ['id' => Str::of( $item->name)->slug("-"),'uuid'=>$item->options->uuid]) }}"><img src="{{ asset('images/products/'. $item->options->images) }}" alt=""></a></td>
+                                                <td class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $item->name)->slug("-"),'uuid'=>$item->options->uuid]) }}">{{$item->name}}</a></td>
                                                 <td class="product-price">{{number_format($item->price)}}</td>
                                                 <td class="product_quantity"><label>Quantity</label> <input min="1" max="100" name="quantity[{{$item->rowId}}]" value="{{$item->qty}}" type="number"></td>
                                                 <td class="product_total">{{number_format($item->price * $item->qty)}}</td>
-
-
                                             </tr>
                                             @endforeach
                                         </tbody>

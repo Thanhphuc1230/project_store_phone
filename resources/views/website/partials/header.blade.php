@@ -414,10 +414,10 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="column2 col-lg-6">
-                        <div class="search_container search-result" >
+                        <div class="column2 col-lg-6" style="position:absolute;z-index:10">
+                        <div class="search_container search-result" style="  background-color: #fff;width:400px ;height: 250px;overflow: auto;" >
                             
-                            </div>
+                        </div>
                     </div>
 
                     </div>
