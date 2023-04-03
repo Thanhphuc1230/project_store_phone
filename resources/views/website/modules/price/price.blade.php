@@ -8,7 +8,11 @@
                 <div class="breadcrumb_content">
                     <ul>
                         <li><a href="{{route('website.index')}}">Trang chủ</a></li>
-                        <li>Sản phẩm giá dưới 10tr - 15tr</li>
+                        <li>Sản phẩm từ {{number_format($price_segment['price_start'],0,"",".")}}VND  
+                        @php if($price_segment['price_end'] != 0){ @endphp
+                            đến {{number_format($price_segment['price_end'],0,"",".")}}VND
+                       @php }@endphp
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +46,7 @@
                                         <a class="secondary_img" href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}"><img src="{{ asset('images/products/' . $product1->images) }}"alt=""></a>
                                     </div>
                                     <div class="product_content">
-                                        <h4><a href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}">{{$product1->name}}</a></h4>
+                                        <h4><a href="{{ route('website.detail', ['id' =>Str::of( $product1->name)->slug("-"),'uuid'=>$product1->uuid]) }}">{{$product1->name}}</a></h4>
                                         {{-- <div class="product_rating">
                                             <ul>
                                                 <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -96,7 +100,10 @@
                         <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
                     </div>
                     <div class="page_amount">
-                        <h3>sản phẩm giá dưới 10tr - 15tr</h3>
+                        <h3>Sản phẩm từ {{number_format($price_segment['price_start'],0,"",".")}}VND  
+                        @php if($price_segment['price_end'] != 0){ @endphp
+                            đến {{number_format($price_segment['price_end'],0,"",".")}}VND
+                       @php }@endphp</h3>
                     </div>
                     <div class="page_amount">
                         <p>Showing 1–9 of 21 results</p>
@@ -164,7 +171,7 @@
                                     </div>
                                 </div>
                                 <div class="product_content list_content">
-                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product1->name)->slug("-"),'uuid'=>$product->uuid]) }}">{{$product->name}}</a></h4>
+                                    <h4 class="product_name"><a href="{{ route('website.detail', ['id' => Str::of( $product->name)->slug("-"),'uuid'=>$product->uuid]) }}">{{$product->name}}</a></h4>
                                     {{-- <div class="product_rating">
                                         <ul>
                                             <li><a href="#"><i class="ion-android-star-outline"></i></a></li>

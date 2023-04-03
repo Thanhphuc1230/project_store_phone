@@ -73,10 +73,8 @@ Route::name('website.')->group(function () {
     Route::get('/detail/{id}/{uuid}', [PController::class, 'detail'])->name('detail')->where('id', '[-\w]+');;   
     Route::post('/rating/product', [PController::class, 'ratingProduct'])->name('ratingProduct');
 
-    Route::get('/price/5tr/{id}', [PController::class, 'price'])->name('price');
-    Route::get('/price/5-15tr/{id}', [PController::class, 'price10tr'])->name('price10tr');
-    Route::get('/price/15tr-25tr/{id}', [PController::class, 'price20tr'])->name('price20tr');
-    Route::get('/price/25tr/{id}', [PController::class, 'price25tr'])->name('price25tr');
+    Route::get('/price/{id}/{price_start}/{price_end}', [PController::class, 'price'])->name('price');
+  
     Route::get('/category/{id}', [PController::class, 'category'])->name('category');
     Route::get('/category/parent/{id}', [PController::class, 'categoryParent'])->name('categoryParent');
     

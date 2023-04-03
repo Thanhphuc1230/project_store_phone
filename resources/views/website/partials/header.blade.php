@@ -50,10 +50,10 @@
                                                            @endphp
                                                            @foreach( $categoriesPrice as $categoriesPrices)
                                                           
-                                                        <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate])}}">Dưới 5tr</a></li>
-                                                        <li><a href="{{route('website.price10tr',['id' => $categoriesPrices->name_cate])}}">Từ 5tr-15tr</a></li>
-                                                        <li><a href="{{route('website.price20tr',['id' => $categoriesPrices->name_cate])}}">Từ 15tr-25tr</a></li>
-                                                        <li><a href="{{route('website.price25tr',['id' => $categoriesPrices->name_cate])}}">Từ 25tr trở lên</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>0,'price_end'=>5000000])}}">Dưới 5tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>5000000,'price_end'=>15000000])}}">5tr-15tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>15000000,'price_end'=>25000000])}}">15tr-25tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>25000000,'price_end'=>0])}}">Trên 25tr</a></li>
                                                             @endforeach
                                                     </ul>
                                                 </li>
@@ -265,10 +265,10 @@
                                                         
                                                            @endphp
                                                            @foreach( $categoriesPrice as $categoriesPrices)
-                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate])}}">Dưới 5tr</a></li>
-                                                            <li><a href="{{route('website.price10tr',['id' => $categoriesPrices->name_cate])}}">Từ 5tr-15tr</a></li>
-                                                            <li><a href="{{route('website.price20tr',['id' => $categoriesPrices->name_cate])}}">Từ 15tr-25tr</a></li>
-                                                            <li><a href="{{route('website.price25tr',['id' => $categoriesPrices->name_cate])}}">Từ 25tr trở lên</a></li>
+                                                           <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>0,'price_end'=>5000000])}}">Dưới 5tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>5000000,'price_end'=>15000000])}}">5tr-15tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>15000000,'price_end'=>25000000])}}">15tr-25tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>25000000,'price_end'=>0])}}">Trên 25tr</a></li>
                                                             @endforeach
                                                         </ul>
                                                     </li>
@@ -301,10 +301,10 @@
                                                         
                                                            @endphp
                                                            @foreach( $categoriesPrice as $categoriesPrices)
-                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate])}}">Dưới 5tr</a></li>
-                                                            <li><a href="{{route('website.price10tr',['id' => $categoriesPrices->name_cate])}}">Từ 5tr-15tr</a></li>
-                                                            <li><a href="{{route('website.price20tr',['id' => $categoriesPrices->name_cate])}}">Từ 15tr-25tr</a></li>
-                                                            <li><a href="{{route('website.price25tr',['id' => $categoriesPrices->name_cate])}}">Từ 25tr trở lên</a></li>
+                                                           <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>0,'price_end'=>5000000])}}">Dưới 5tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>5000000,'price_end'=>15000000])}}">5tr-15tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>15000000,'price_end'=>25000000])}}">15tr-25tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>25000000,'price_end'=>0])}}">Trên 25tr</a></li>
                                                             @endforeach
                                                         </ul>
                                                     </li>
@@ -344,10 +344,10 @@
                                                         
                                                            @endphp
                                                            @foreach( $categoriesPrice as $categoriesPrices)
-                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate])}}">Dưới 5tr</a></li>
-                                                            <li><a href="{{route('website.price10tr',['id' => $categoriesPrices->name_cate])}}">Từ 5tr-15tr</a></li>
-                                                            <li><a href="{{route('website.price20tr',['id' => $categoriesPrices->name_cate])}}">Từ 15tr-25tr</a></li>
-                                                            <li><a href="{{route('website.price25tr',['id' => $categoriesPrices->name_cate])}}">Từ 25tr trở lên</a></li>
+                                                           <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>0,'price_end'=>5000000])}}">Dưới 5tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>5000000,'price_end'=>15000000])}}">5tr-15tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>15000000,'price_end'=>25000000])}}">15tr-25tr</a></li>
+                                                            <li><a href="{{route('website.price',['id' => $categoriesPrices->name_cate,'price_start'=>25000000,'price_end'=>0])}}">Trên 25tr</a></li>
                                                             @endforeach
                                                         </ul>
                                                     </li>

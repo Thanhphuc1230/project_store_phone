@@ -160,8 +160,8 @@ public function category_product ($category_id, $skip = null, $limit = null)
         
     return $sql->get();
 }
-public function price($id){
-
+public function price($id,$price_start,$price_end){
+    
     $sql_sidebar = DB::table('categories')
     ->where('name_cate', $id)->get();
     
@@ -174,137 +174,36 @@ public function price($id){
     $data['categories_featured'] = $sql_category->get();
 
     $category_id_featured = $sql_category->pluck('id')->toArray();
-
-    $data['product_price'] = DB::table('products')
-    ->join('categories', 'products.category_id', '=', 'categories.id')
-    ->select('products.*', 'categories.name_cate as catename')
-    ->whereIn('category_id', $category_id_featured)
-    ->where('status_product',1)
-    ->where('price','<','5000000')
-    ->orderBy('price','DESC')
-    ->inRandomOrder()          
-    ->get();
-
-    $data['products_random1'] = DB::table('products')
-    ->join('categories','products.category_id','=','categories.id')
-    ->select('products.*','categories.name_cate')
-    ->whereIn('category_id',$category_id_featured)
-    ->where('status_product',1)
-    ->inRandomOrder()
-    ->limit(4)
-    ->get();
-            
-        
-// $data['product_price'] =DB::select('SELECT * FROM `products` WHERE price <= 5000000 ORDER BY price ASC');
-
-    return view('website.modules.price.price5tr',$data);
-}
-public function price10tr($id){
-    $sql_sidebar = DB::table('categories')
-    ->where('name_cate', $id)->get();
-    
-    $id_name_cate = $sql_sidebar->pluck('id')->toArray();
-
-    $sql_category = DB::table('categories')
-    ->where('parent_id', $id_name_cate)
-    ->limit(8);
-
-    $data['categories_featured'] = $sql_category->get();
-
-    $category_id_featured = $sql_category->pluck('id')->toArray();
-
-    $data['product_price'] = DB::table('products')
-    ->join('categories', 'products.category_id', '=', 'categories.id')
-    ->select('products.*', 'categories.name_cate as catename')
-    ->whereIn('category_id', $category_id_featured)
-    ->where('status_product',1)
-    ->where('price','<','15000000')
-    ->where('price','>','5000000')
-    ->orderBy('price','DESC')
-    ->inRandomOrder()         
-    ->get();
-
-    $data['products_random1'] = DB::table('products')
-    ->join('categories','products.category_id','=','categories.id')
-    ->select('products.*','categories.name_cate')
-    ->whereIn('category_id',$category_id_featured)
-    ->where('status_product',1)
-    ->inRandomOrder()
-    ->limit(4)
-    ->get();
-
-    return view('website.modules.price.price10tr',$data);
-}
-public function price20tr($id){
-        $sql_sidebar = DB::table('categories')
-        ->where('name_cate', $id)->get();
-        
-        $id_name_cate = $sql_sidebar->pluck('id')->toArray();
-
-        $sql_category = DB::table('categories')
-        ->where('parent_id',  $id_name_cate)
-        ->limit(8);
-
-        $data['categories_featured'] = $sql_category->get();
-
-        $category_id_featured = $sql_category->pluck('id')->toArray();
-
-        $data['product_price'] = DB::table('products')
-        ->join('categories', 'products.category_id', '=', 'categories.id')
-        ->select('products.*', 'categories.name_cate as catename')
-        ->whereIn('category_id', $category_id_featured)
-        ->where('status_product',1)
-        ->where('price','<','25000000')
-        ->where('price','>','15000000')
-        ->orderBy('price','DESC')
-        ->inRandomOrder()          
-        ->get();
-
-        $data['products_random1'] = DB::table('products')
-        ->join('categories','products.category_id','=','categories.id')
-        ->select('products.*','categories.name_cate')
-        ->whereIn('category_id',$category_id_featured)
-        ->where('status_product',1)
-        ->inRandomOrder()
-        ->limit(4)
-        ->get();
-
-    return view('website.modules.price.price20tr',$data);
-}
-public function price25tr($id){
-        $sql_sidebar = DB::table('categories')
-        ->where('name_cate', $id)->get();
-        
-        $id_name_cate = $sql_sidebar->pluck('id')->toArray();
-
-        $sql_category = DB::table('categories')
-        ->where('parent_id',  $id_name_cate)
-        ->limit(8);
-
-        $data['categories_featured'] = $sql_category->get();
-
-        $category_id_featured = $sql_category->pluck('id')->toArray();
-
-        $data['product_price'] = DB::table('products')
-        ->join('categories', 'products.category_id', '=', 'categories.id')
-        ->select('products.*', 'categories.name_cate as catename')
-        ->whereIn('category_id', $category_id_featured)
-        ->where('status_product',1)
-        ->where('price','>','23000000')
-        ->orderBy('price','DESC')
-        ->inRandomOrder()          
-        ->get();
-
-        $data['products_random1'] = DB::table('products')
-        ->join('categories','products.category_id','=','categories.id')
-        ->select('products.*','categories.name_cate')
-        ->whereIn('category_id',$category_id_featured)
-        ->where('status_product',1)
-        ->inRandomOrder()
-        ->limit(4)
-        ->get();
   
-    return view('website.modules.price.price25tr',$data);
+   $data['product_price'] = DB::table('products')
+    ->join('categories', 'products.category_id', '=', 'categories.id')
+    ->select('products.*', 'categories.name_cate as catename')
+    ->whereIn('category_id', $category_id_featured)
+    ->where('status_product', 1)
+    ->where('price', '>', $price_start)
+    ->when($price_end > 0, function ($query) use ($price_end) {
+        return $query->where('price', '<', $price_end);
+    })
+    ->orderBy('price', 'DESC')
+    ->get();
+  
+
+    $data['products_random1'] = DB::table('products')
+    ->join('categories','products.category_id','=','categories.id')
+    ->select('products.*','categories.name_cate')
+    ->whereIn('category_id',$category_id_featured)
+    ->where('status_product',1)
+    ->inRandomOrder()
+    ->limit(4)
+    ->get();
+   $data['price_segment']=[
+    'price_start' => $price_start,
+    'price_end' =>$price_end
+   ];
+    
+// $data['product_price'] =DB::select('SELECT * FROM `products` WHERE price <= 5000000 ORDER BY price ASC');
+    
+    return view('website.modules.price.price',$data);
 }
 
 public function product_countdown($id){
