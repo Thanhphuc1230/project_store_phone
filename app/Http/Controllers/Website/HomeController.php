@@ -17,9 +17,8 @@ class HomeController extends Controller
      */
     public function index()
     { 
-        
         $data['wishlist'] = DB::table('top_wishlist')->get();
-       
+        
         $sql_category =DB::table('categories')->where('parent_id',2)->where('status',1)->limit(5);
         $sql_category3 =DB::table('categories');
         $sql_category1 =DB::table('categories')->where('parent_id',3)->where('status',1)->limit(8);

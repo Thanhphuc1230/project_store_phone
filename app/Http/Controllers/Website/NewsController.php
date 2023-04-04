@@ -128,6 +128,13 @@ class NewsController extends Controller
 
         $countAfterLike =DB::table('likes')->where([['new_id',$request->new],])->count();
     }
+
+    public function RestApi(){
+        $data = ['url' => url(route('website.index'))];
+
+      
+        return view('website.modules.blog.api',$data);
+    }
    
 }
 ?>

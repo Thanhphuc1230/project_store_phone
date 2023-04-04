@@ -79,6 +79,9 @@
                                     <li><a href="{{route('website.blog')}}">News</a>
                                      
                                     </li>
+                                    <li><a href="{{route('website.RestApi')}}">API</a>
+                                     
+                                     </li>
                                     <li><a href="#">pages <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub_menu pages">
                                             <li><a href="{{route('website.about')}}">About Us</a></li>

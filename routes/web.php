@@ -100,13 +100,16 @@ Route::name('website.')->group(function () {
     Route::get('/blog', [NewsController::class, 'blog'])->name('blog');
     Route::get('/blog/detail/{title}', [NewsController::class, 'blogDetail'])
     ->name('blogDetail')
-    ->where('uuid', '[a-zA-Z0-9-_]+');    
+    ->where('uuid', '[a-zA-Z0-9-_]+');
     Route::post('/like', [NewsController::class, 'like'])->name('like');
     Route::post('/rating/post', [NewsController::class, 'rating'])->name('rating');
    
     Route::get('/comingsoon', [NewsController::class, 'comingSoon'])->name('comingSoon');
     Route::get('/aboutus', [NewsController::class, 'about'])->name('about');
     Route::get('/map', [NewsController::class, 'map'])->name('map');
+
+    //API
+    Route::get('/rest-api', [NewsController::class, 'RestApi'])->name('RestApi');
 
     //Craw data form TGDD
     Route::get('/get-data', [CrawlerController::class, 'featchAllTGDD'])->name('getData');
